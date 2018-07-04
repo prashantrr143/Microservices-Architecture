@@ -1,14 +1,10 @@
 package in.prashant.microservices.order.service;
 
-import java.awt.ItemSelectable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
-
 import org.springframework.stereotype.Service;
 
 import in.prashant.microservices.order.domain.Item;
