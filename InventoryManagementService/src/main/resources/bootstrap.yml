@@ -1,0 +1,4 @@
+# Bootstrap Application Information
+spring:
+  application:
+    name: inventoryservice
