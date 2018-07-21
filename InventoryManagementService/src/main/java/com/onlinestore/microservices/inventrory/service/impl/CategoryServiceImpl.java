@@ -1,6 +1,7 @@
 package com.onlinestore.microservices.inventrory.service.impl;
 
 import java.util.HashSet;
+
 import java.util.Set;
 
 import org.springframework.stereotype.Service;
@@ -14,7 +15,9 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	public Set<Category> getAllCategories() {
 		// TODO Auto-generated method stub
+
 		return getMockedUpCategories();
+
 	}
 
 	@Override
@@ -43,4 +46,5 @@ public class CategoryServiceImpl implements CategoryService {
 		categories.add(categoryP5);
 		return null;
 	}
+
 }

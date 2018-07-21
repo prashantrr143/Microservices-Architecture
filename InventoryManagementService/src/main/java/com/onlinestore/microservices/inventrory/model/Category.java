@@ -16,6 +16,7 @@ public class Category {
 
 	private Set<Category> childCategories;
 	private Set<Product> products;
+
 	private Category parentCategory;
 
 	public Category() {
@@ -73,6 +74,7 @@ public class Category {
 
 	}
 
+
 	public long getCategoryId() {
 		return categoryId;
 	}
@@ -120,5 +122,6 @@ public class Category {
 	public void setParentCategory(Category parentCategory) {
 		this.parentCategory = parentCategory;
 	}
+
 
 }
