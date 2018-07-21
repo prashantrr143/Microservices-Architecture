@@ -37,6 +37,11 @@ public class CategoryServiceImpl implements CategoryService {
 		Category categoryP4 = new Category(4000L, "Furniture", "Category which lets you view beds, sofas, chairs etc.");
 		Category categoryP5 = new Category(5000L, "Automobile Accessories",
 				"Category under which you can find all products to take care of your auto-mobiles");
+		
+		
+		Category subCat1 = new Category(10001l, "Mobile Phones", "Category- Mobile Phones");
+		
+		
 
 		Set<Category> categories = new HashSet<>();
 		categories.add(categoryP1);
@@ -44,7 +49,7 @@ public class CategoryServiceImpl implements CategoryService {
 		categories.add(categoryP3);
 		categories.add(categoryP4);
 		categories.add(categoryP5);
-		return null;
+		return categories;
 	}
 
 }

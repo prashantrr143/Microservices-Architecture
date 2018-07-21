@@ -1,5 +1,6 @@
 package com.onlinestore.microservices.inventrory.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -14,8 +15,8 @@ public class Category {
 	private String name;
 	private String description;
 
-	private Set<Category> childCategories;
-	private Set<Product> products;
+	private Set<Category> childCategories = new HashSet<>();
+	private Set<Product> products = new HashSet<>();
 
 	private Category parentCategory;
 
@@ -31,6 +32,11 @@ public class Category {
 	public Category(long id, String name, String description) {
 		this(id, name);
 		this.description = description;
+	}
+
+	public void addChildCategory(Category category) {
+		category.setParentCategory(this);
+		this.getChildCategories().add(category);
 	}
 
 	public static class CategoryBuilder {
@@ -73,7 +79,6 @@ public class Category {
 		}
 
 	}
-
 
 	public long getCategoryId() {
 		return categoryId;
@@ -122,6 +127,5 @@ public class Category {
 	public void setParentCategory(Category parentCategory) {
 		this.parentCategory = parentCategory;
 	}
-
 
 }
