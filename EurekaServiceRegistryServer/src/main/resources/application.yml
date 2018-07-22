@@ -1,0 +1,29 @@
+
+#Eureka Server Congiuration
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
+    
+#Spring Application Configuration    
+spring:
+  application:
+    name: Eureka_Application_Service_Registry
+   
+    
+# Server Configuration
+server:
+  port: 8761
+  
+
+
+# logging Support
+logging:
+  level:
+    com:
+      netlfix:
+        eureka: OFF
+        discovery: OFF    
