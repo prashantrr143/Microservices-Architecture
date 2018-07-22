@@ -41,6 +41,8 @@ public class CategoryServiceImpl implements CategoryService {
 		
 		Category subCat1 = new Category(10001l, "Mobile Phones", "Category- Mobile Phones");
 		
+		categoryP1.addChildCategory(subCat1);
+		
 		
 
 		Set<Category> categories = new HashSet<>();
