@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.onlinestore.microservices.inventrory.model.Product;
@@ -26,6 +27,15 @@ public class ProductsController {
 
 		List<Product> products = new ArrayList<>();
 		return products;
+	}
+
+	@GetMapping("/")
+	public List<Product> fetchProductsByCriteria(@RequestParam(name = "offset", defaultValue = "0") long offset,
+			@RequestParam(name = "limit", defaultValue = "30") long limit) {
+		List<Product> products = new ArrayList<>();
+		System.out.println("Passed Request Parameters :  offset: " + offset +" , limit " + limit);
+		return products;
+
 	}
 
 }
