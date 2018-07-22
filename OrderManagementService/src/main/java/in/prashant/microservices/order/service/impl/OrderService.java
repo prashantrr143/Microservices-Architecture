@@ -1,4 +1,4 @@
-package in.prashant.microservices.order.service;
+package in.prashant.microservices.order.service.impl;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import in.prashant.microservices.order.domain.Item;
 import in.prashant.microservices.order.domain.Order;
+import in.prashant.microservices.order.service.IOrderService;
 
 @Service
 public class OrderService implements IOrderService{
